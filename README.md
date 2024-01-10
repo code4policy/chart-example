@@ -32,86 +32,7 @@ Once you run this, you can open up the website by typing `http://localhost:8000/
 
 Now we're ready to start editing the code!
 
-### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Example - Part 1: Splitting out HTML, CSS, and JavaScript
-The problem with the code currently in this repository is that the HTML is ill-formed (there is no head and body). Also the CSS and the JavaScript is all in the same file as the HTML. Messy! I will demand that you always keep them separated for this class. Lets go ahead and do that.
-
-
-Remember, a good HTML document has a head and body.
-
-```html
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title> Example Site </title>
-</head>
-
-<body>
-</body>
-
-</html>
-```
-
-You can link a separate CSS file with the following code. Remember, linking CSS always happens in the **\<head> \</head>** of the document.
-
-```html
-<link href="styles/style.css" rel="stylesheet" type="text/css">
-```
-
-You can call a JavaScript file like with this code. In this case we're linking one peice of code (the D3 library itself) from a website, and another peice of code (our specific chart) form a local file. Javascript is customarily placed at the end of the **\<body> \</body>** of the document. It is usually the last line before you close the body tag.
-
-```html
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="scripts/chart.js"></script>
-```
-
-Tasks:
-
-1. Your task is to extract the parts of `example-chart.html` and move them into three separate files. Grab the styles and move them into `styles/style.css`. Grab the javascript and move it into `scripts/chart.js`. Finally, grab the valid HTML and move it into `index.html`. Now your directory structure should look something like this:
-
-	```
-	.
-	├── data.tsv
-	├── example-chart.html
-	├── index.html
-	├── scripts
-	│   └── chart.js
-	└── styles
-	    └── style.css
-   ```
-
-
-2. The next step is to link the CSS and Javascript to `index.html`. Your `index.html` might look something like this now:
-
-	```html
-	<!DOCTYPE html>
-	<html>
-
-	<head>
-		<title> Example Site </title>
-
-		<!--Link to StyleSheets in the head-->
-		<link href="styles/style.css" rel="stylesheet" type="text/css">
-	</head>
-
-	<body>
-		<h1> Apple: The Profitable Fruit </h1>
-
-		<p> If you bought apple stock a long time ago you're probably rich. That's because it went up really fast! See for yourself in the chart below. </p>
-
-		<h2> Apple Stocks are Really Rising! </h2>
-		<h3> ...more than any other fruit-based corporation. </h3>
-
-		<!-- Run JavaScript scripts in the body -->
-		<script src="//d3js.org/d3.v3.min.js"></script>
-		<script src="scripts/chart.js"></script>
-	</body>
-
-	</html>
-	```
-3. Commit and push to GitHub
-
-### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Example - Part 2: Avoiding Conflicting CSS
+### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Example - Part 1: Avoiding Conflicting CSS
 
 
 Right now the chart works fine, however, that is because the chart is the only thing on the page. The CSS in these example D3 examples often assume the D3 is the only thing on the page. So if there were other things on the page, the CSS might also end up applying to those things as well! To avoid that, we must specify that the CSS only apply to the chart. Lets modify the CSS selectors to do just that.
@@ -195,7 +116,7 @@ Tasks:
 3. Modify the CSS so that it applies only to the div with id `apple-stock-chart` and doesn't spill over to any other charts that may be on the page.
 4. Commit and push to GitHub
 
-### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Example - Part 3: Using Functions
+### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Example - Part 2: Using Functions
 
 One important programming principle is to write code that is not redundant. This principle is known as writing DRY code ("Don't Repeat Yourself").
 
@@ -238,6 +159,6 @@ Tasks:
 	```
 
 
-### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Bonus - Part 4
+### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Bonus - Part 3
 
 Update the styles so that only the second chart appears with a green line, while the first chart remains steelblue in color.
