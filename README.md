@@ -32,7 +32,7 @@ Once you run this, you can open up the website by typing `http://localhost:8000/
 
 Now we're ready to start editing the code!
 
-### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Example - Part 1: Avoiding Conflicting CSS
+### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Part 1: Avoiding Conflicting CSS
 
 
 Right now the chart works fine, however, that is because the chart is the only thing on the page. The CSS in these example D3 examples often assume the D3 is the only thing on the page. So if there were other things on the page, the CSS might also end up applying to those things as well! To avoid that, we must specify that the CSS only apply to the chart. Lets modify the CSS selectors to do just that.
@@ -116,7 +116,7 @@ Tasks:
 3. Modify the CSS so that it applies only to the div with id `apple-stock-chart` and doesn't spill over to any other charts that may be on the page.
 4. Commit and push to GitHub
 
-### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Example - Part 2: Using Functions
+### ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Part 2: Using Functions
 
 One important programming principle is to write code that is not redundant. This principle is known as writing DRY code ("Don't Repeat Yourself").
 
